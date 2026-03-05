@@ -1,4 +1,9 @@
 package tictactoe;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.util.Scanner;
+
 public class Board 
 {
 	//holds game play data in an instance variable

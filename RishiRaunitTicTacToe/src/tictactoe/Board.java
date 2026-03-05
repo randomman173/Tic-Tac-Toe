@@ -59,8 +59,20 @@ public class Board
     //create a random board
     public void createRandomBoard()
     {
-    	
+    	char options[] = {'E','X', 'O'};
+    	char[][] randomBoard = new char [3][3];
+    	for(int row = 0; row < randomBoard.length; row++)
+    	{
+    		for(int col = 0; col < randomBoard[0].length; col++)
+    		{
+    			int index = (int)(Math.random()*3);
+    			randomBoard[row][col] = options[index];
+    		}
+    	}
+    	this.grid = randomBoard;
+    	this.saveBoardToFile();
     }
+    
     
     //clears the grid by placing E in every cell
     public void clearBoard()
@@ -72,6 +84,8 @@ public class Board
     	this.grid = clearedBoard;
     	this.saveBoardToFile();
     }
+    
+    
     
     public static void main(String args[])
     {
